@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+a = []
+z=999
+y=999
+while z >= 100:
+    if str(z * y) == str(z * y)[::-1]:
+        a.append(z*y)
+    if y == 100:
+        y = 999
+        z -= 1
+    y -= 1
+a.sort()
+print(a[len(a)-1])
