@@ -6,8 +6,8 @@
 What is the smallest positive number that is evenly divisible by all of the
 numbers from 1 to 20?
 """
-x=20
-a=0
+x = 20
+a = 0
 while a == 0:
     if (x % 11 == 0 and
         x % 12 == 0 and

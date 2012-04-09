@@ -12,10 +12,10 @@ natural numbers and the square of the sum is 3025 − 385 = 2640.
 Find the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum.
 """
-a=b=0
-for x in range(1,101):
+a = b = 0
+for x in range(1, 101):
     a += x**2
-for x in range(1,101):
+for x in range(1, 101):
     b += x
 b **= 2
 b -= a
