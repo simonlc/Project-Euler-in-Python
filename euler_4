@@ -16,4 +16,4 @@ while z >= 100:
         z -= 1
     y -= 1
 a.sort()
-print(a[len(a) - 1])
+print(a[-1])
