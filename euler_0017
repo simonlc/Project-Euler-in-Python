@@ -1,0 +1,79 @@
+#!/usr/bin/env python
+"""
+If the numbers 1 to 5 are written out in words: one, two, three, four,
+five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+
+If all the numbers from 1 to 1000 (one thousand) inclusive were written out
+in words, how many letters would be used?
+
+NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and
+forty-two) contains 23 letters and 115 (one hundred and fifteen) contains
+20 letters. The use of "and" when writing out numbers is in compliance with
+British usage.
+"""
+#Reference
+"""
+one      ten            twenty
+two      eleven         thirty
+three    twelve         forty
+four     thirteen       fifty
+five     fourteen       sixty
+six      fifteen        seventy
+seven    sixteen        eighty
+eight    seventeen      ninety
+nine     eighteen       hundredand
+         nineteen       thousand
+"""
+total = 0
+for i in range(1,1001):
+
+    #third digit
+    if len(str(i)) >= 3:
+        if str(i)[-3] == "0":
+            total += 11 #onethousand
+        elif str(i)[-3] in ["1", "2", "6"]:
+            total += 10
+        elif str(i)[-3] in ["4", "5", "9"]:
+            total += 11
+        else:
+            total += 12
+
+        if str(i)[1:3] != "00":
+            total += 3
+
+    if i % 100 not in range(10,20):
+
+        #first digit
+        if str(i)[-1] == "0":
+            total = total
+        elif str(i)[-1] in ["1", "2", "6"]:
+            total += 3
+        elif str(i)[-1] in ["4", "5", "9"]:
+            total += 4
+        else:
+            total += 5
+
+        #second digit
+        if len(str(i)) >= 2:
+            if str(i)[-2] == "0":
+                total = total
+            elif str(i)[-2] in ["2", "3", "8", "9"]:
+                total += 6
+            elif str(i)[-2] in ["4", "5", "6"]:
+                total += 5
+            else:
+                total += 7
+
+    else: #if teen
+        if str(i)[-1] == "0":
+            total += 3
+        elif str(i)[-1] in ["3", "4", "8", "9"]:
+            total += 8
+        elif str(i)[-1] in ["1", "2"]:
+            total += 6
+        elif str(i)[-1] in ["5", "6"]:
+            total += 7
+        else:
+            total += 9
+
+print(total)
