@@ -54,7 +54,7 @@ for i in range(1,1001):
             total += 5
 
         #second digit
-        if i >= 10:
+        if i >= 20:
             if (i % 100) // 10 == 0:
                 total = total
             elif (i % 100) // 10 in [2, 3, 8, 9]:
