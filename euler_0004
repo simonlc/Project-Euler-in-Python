@@ -15,5 +15,4 @@ while z >= 100:
         y = 999
         z -= 1
     y -= 1
-a.sort()
-print(a[-1])
+print(max(a))

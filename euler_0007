@@ -28,4 +28,5 @@ def main():
         if isprime(x):
             n += 1
     return x
+
 print(main())

@@ -109,4 +109,4 @@ a = 0
 while i < len(num):
     a += int(num[i:i+50])
     i += 51
-print(str(a)[0:10])
+print(str(a)[:10])
