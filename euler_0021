@@ -10,7 +10,7 @@ The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
 
 Evaluate the sum of all the amicable numbers under 10000.
 """
-amicable = set([])
+amicable = 0
 import math
 def d(n):
     """http://stackoverflow.com/a/171779"""
@@ -23,6 +23,6 @@ def d(n):
 for a in range(1, 10000):
     b = d(a)
     if d(b) == a and a != b:
-        amicable.add(a+b)
+        amicable += a
 
-print(sum(amicable))
+print(amicable)
