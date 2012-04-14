@@ -5,14 +5,14 @@ from the product of two 2-digit numbers is 9009 = 91 × 99.
 
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
-a = set([])
+total = 0
 z = 999
 y = 999
 while z >= 100:
-    if str(z * y) == str(z * y)[::-1]:
-        a.add(z * y)
+    if str(z * y) == str(z * y)[::-1] and z * y > total:
+        total = z * y
     if y == 100:
         y = 999
         z -= 1
     y -= 1
-print(max(a))
+print(total)
