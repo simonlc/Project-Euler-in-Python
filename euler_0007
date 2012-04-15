@@ -7,7 +7,7 @@ What is the 10 001st prime number?
 """
 #http://www.daniweb.com/software-development/python/code/216880/check-if-a-number-is-a-prime-number-python
 def isprime(n):
-    """Check if integer n is a prime"""
+    "Check if integer n is a prime"
     n = abs(int(n))
     if n < 2:
         return False
