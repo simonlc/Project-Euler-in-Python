@@ -9,13 +9,9 @@ By considering the terms in the Fibonacci sequence whose values do not
 exceed four million, find the sum of the even-valued terms.
 """
 x = 1
-y = 0
-z = 0
-f = []
+y = z = f = 0
 while x <= 2000**2:
-    f.append(x)
-    x += f[(len(f) - 2)]
-for y in f:
-    if y % 2 == 0:
-        z += y
+    if x % 2 == 0:
+        z += x
+    x, f = f, x+f 
 print(z)
